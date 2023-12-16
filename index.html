@@ -10,11 +10,12 @@
 
 <title>FUSION</title>
 <!---------------------------------TOP NAV--------------------------->
-<div class="topnav">
-  <a href="News">NEWS</a>
-  <a href="Forms/JobForm/index.html">JOB FORM</a>
-  <a href="Forms/SuggestionForm/index.html">SUGGESTION FORM</a>
-</div>
+
+  <div id="topbar">
+    <div class="games">
+      <a href="https://fusion-game.github.io/FUSION/">Home 🏡</a><a href="https://fusion-game.github.io/FUSION/News/">News 🗞️</a>
+    </div>
+  </div>
 <!---------------------------------ANIMATION------------------------->
 <img src="ASSETS/FUSION.ANIMATION.gif" alt="fusion-animation" class="animation">
 <!--------------------------------------CSS----------------------------------------------------->
@@ -60,6 +61,38 @@
     border-radius: 5px;
     border-width: 5px;
  
+    #topbar {
+      background-color: #ADD8E6;
+      padding: 5px 10px;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 25px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #topbar a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 5px;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+
+    #topbar a:hover {
+      background-color: #F8F9FA;
+    }
+
+    #topbar .games {
+      display: flex;
+      align-items: center;
+    }
+
+    #topbar .games img {
+      padding-right: 5px;
+    }
+
+</head>
   </style>
 <!--------------------------------------------------GAME ADD CODE------------------------------------>
 <a href="Dunes/index.html">
