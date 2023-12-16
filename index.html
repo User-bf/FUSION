@@ -10,12 +10,13 @@
 
 <title>FUSION</title>
 <!---------------------------------TOP NAV--------------------------->
-
-  <div id="topbar">
-  <div class="games">
-   <a href="https://fusion-game.github.io/FUSION/">Home 🏡</a><a href="https://fusion-game.github.io/FUSION/News/">News 🗞️</a>
-  </div>
+<div id="topbar">
+ <div class="games">
+  <a href="https://fusion-game.github.io/FUSION/">Home 🏡</a>
+  <a href="https://fusion-game.github.io/FUSION/News/">News 🗞️</a>
  </div>
+</div>
+
 <!---------------------------------ANIMATION------------------------->
 <img src="ASSETS/FUSION.ANIMATION.gif" alt="fusion-animation" class="animation">
 <!--------------------------------------CSS----------------------------------------------------->
@@ -61,37 +62,61 @@
     border-radius: 5px;
     border-width: 5px;
  
-   
-  #topbar {
-   background-color: #2f9eed;
-   padding: 5px 10px;
-   font-size: 20px;
-   font-weight: 600;
-   border-radius: 25px;
-   display: flex;
-   justify-content: space-between;
-  }
+ #topbar {
+  background-color: #ADD8E6;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
 
-  #topbar a {
-   color: white;
-   text-decoration: none;
-   padding: 5px 5px;
-   margin: 0 5px;
-   border-radius: 5px;
-  }
+#topbar:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px solid #00FF00;
+  border-radius: 25px;
+  animation: neonGlow 2s linear infinite;
+}
 
-  #topbar a:hover {
-   background-color: #8e8ba3;
+@keyframes neonGlow {
+  0% {
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5px #00FF00, 0 0 20px #00FF00, 0 0 40px #00FF00, 0 0 60px #00FF00, 0 0 80px #00FF00, 0 0 100px #00FF00, 0 0 120px #00FF00;
   }
+  100% {
+    transform: translate(50%, 50%);
+    box-shadow: 0 0 5px #00FF00, 0 0 20px #00FF00, 0 0 40px #00FF00, 0 0 60px #00FF00, 0 0 80px #00FF00, 0 0 100px #00FF00, 0 0 120px #00FF00;
+  }
+}
 
-  #topbar .games {
-   display: flex;
-   align-items: center;
-  }
+#topbar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
 
-  #topbar .games img {
-   padding-right: 5px;
-  }
+#topbar a:hover {
+  background-color: #F8F9FA;
+}
+
+#topbar .games {
+  display: flex;
+  align-items: center;
+}
+
+#topbar .games img {
+  padding-right: 5px;
+}
   </style>
 <!--------------------------------------------------GAME ADD CODE------------------------------------>
 <a href="Dunes/index.html">
