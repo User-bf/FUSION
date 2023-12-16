@@ -61,37 +61,61 @@
     border-radius: 5px;
     border-width: 5px;
  
-    #topbar {
-      background-color: #ADD8E6;
-      padding: 5px 10px;
-      font-size: 20px;
-      font-weight: 600;
-      border-radius: 25px;
-      display: flex;
-      justify-content: space-between;
-    }
+ <style>
+ #topbar {
+  background-color: #ADD8E6;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
 
-    #topbar a {
-      color: white;
-      text-decoration: none;
-      padding: 5px 5px;
-      margin: 0 5px;
-      border-radius: 5px;
-    }
+#topbar:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #00ff00, #00cc00, #00ff00);
+  z-index: -1;
+  animation: neonGlow 2s linear infinite;
+}
 
-    #topbar a:hover {
-      background-color: #F8F9FA;
-    }
+@keyframes neonGlow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
 
-    #topbar .games {
-      display: flex;
-      align-items: center;
-    }
+#topbar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
 
-    #topbar .games img {
-      padding-right: 5px;
-    }
+#topbar a:hover {
+  background-color: #F8F9FA;
+}
 
+#topbar .games {
+  display: flex;
+  align-items: center;
+}
+
+#topbar .games img {
+  padding-right: 5px;
+}
+</style>
   </style>
 <!--------------------------------------------------GAME ADD CODE------------------------------------>
 <a href="Dunes/index.html">
